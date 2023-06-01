@@ -1,5 +1,6 @@
 import view
 import model
+import text
 
 def start():
     while True:
@@ -7,7 +8,7 @@ def start():
         match choice:
             case 1:
                 model.open_pb()
-                view.print_message(text.load_succesful)
+                view.print_message(text.load_successful)
         match choice:    
             case 2:
                 pass
