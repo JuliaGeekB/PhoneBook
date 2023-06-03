@@ -5,6 +5,7 @@ import text
 def start():
     while True:
         choice=view.main_menu()
+        
         match choice:
             case 1:
                 model.open_pb()
@@ -15,7 +16,9 @@ def start():
                 pb=model.get_pb()
                 view.print_contacts(pb, text.pb_empty)
             case 4:
-                pass
+                contact=view.input_contact()
+                name=model.add_contact(contact)
+                view.print_message(text.new_contact_successful(name))
             case 5:
                 pass
             case 6:

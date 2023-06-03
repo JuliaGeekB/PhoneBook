@@ -19,3 +19,10 @@ def print_contacts(book: list[dict[str,str]],error:str):
         print('='*71+'\n')
     else:
         print_message(error)
+
+def input_contact() -> dict[str,str]:
+    new={}
+    print(text.input_new_contact)
+    for key, txt in text.new_contact.items():
+        new[key]=input(txt)
+    return new

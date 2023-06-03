@@ -13,3 +13,8 @@ def open_pb():
 def get_pb():
     global phone_book
     return phone_book
+
+def add_contact(new:dict[str,str])->str:
+    global phone_book
+    phone_book.append(new)
+    return new.get('name')

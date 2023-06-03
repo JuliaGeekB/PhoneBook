@@ -10,3 +10,7 @@ main_menu='''\n Главное меню:
 input_choice='Выберите пункт меню: '
 load_successful='Телефонная книга успешно открыта'
 pb_empty='Телефонная книга пуста или не загружена'
+input_new_contact='Введите данные нового контакта: '
+new_contact={'name':'Введите имя: ','phone':'Введите номер телефона: ','comment':'Введите комментарий: '}
+def new_contact_successful(name:str):
+    return f'Контакт {name} успешно добавлен'
