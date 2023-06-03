@@ -11,7 +11,8 @@ def start():
                 model.open_pb()
                 view.print_message(text.load_successful)
             case 2:
-                pass
+                model.save_pb()
+                view.print_message(text.save_successful)
             case 3:
                 pb=model.get_pb()
                 view.print_contacts(pb, text.pb_empty)
@@ -20,7 +21,9 @@ def start():
                 name=model.add_contact(contact)
                 view.print_message(text.new_contact_successful(name))
             case 5:
-                pass
+                key_word=view.input_search()
+                result=model.search_contact(key_word)
+                view.print_contacts(result, text.empty_search(key_word))
             case 6:
                 pass
             case 7:

@@ -1,4 +1,4 @@
-phone_book=[]
+phone_book:list[dict[str,str]]=[]
 path='phonebook.txt'
 
 def open_pb():
@@ -18,3 +18,22 @@ def add_contact(new:dict[str,str])->str:
     global phone_book
     phone_book.append(new)
     return new.get('name')
+
+def save_pb():
+    global phone_book
+    data=[]
+    for contact in phone_book:
+        data.append(':'.join([value for value in contact.values()]))
+    data='\n'.join(data)
+    with open(path, 'w', encoding='UTF-8') as file:
+        file.write(data)
+
+def search_contact(word: str) -> list[dict[str,str]]:
+    global phone_book
+    result: list [dict[str,str]]=[]
+    for contact in phone_book:
+        for field in contact.values():
+            if word.lower() in field.lower():
+                result.append(contact)
+                break
+    return result

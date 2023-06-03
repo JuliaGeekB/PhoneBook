@@ -26,3 +26,6 @@ def input_contact() -> dict[str,str]:
     for key, txt in text.new_contact.items():
         new[key]=input(txt)
     return new
+
+def input_search() -> str:
+    return input(text.input_search)
