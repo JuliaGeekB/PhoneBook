@@ -18,3 +18,9 @@ def new_contact_successful(name:str):
 input_search='Введите параметр поиска: '
 def empty_search(word) -> str:
     return f'Контакты, содержащие слово "{word}" не найдены'
+input_change='Какой контакт будем изменять?'
+change_contact='Введите новые данные или оставьте пустым, чтобы не менять: '
+input_index='Введите индекс контакта: '
+
+def change_successful(name: str)->str:
+    return f'Контакт {name} успешно изменен'
