@@ -24,3 +24,7 @@ input_index='Введите индекс контакта: '
 
 def change_successful(name: str)->str:
     return f'Контакт {name} успешно изменен'
+input_delete='Какой контакт удалить? '
+
+def delete_successful(name: str)->str:
+    return f'Контакт {name} успешно изменен'

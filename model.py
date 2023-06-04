@@ -48,3 +48,18 @@ def change_contact(new: dict, index:int) -> str:
             contact['phone']=new.get('phone',contact.get('phone'))
             contact['comment']=new.get('comment',contact.get('comment'))
             return contact.get('name')
+
+def delete_contact(index:int, result):
+    global phone_book
+    for contact in phone_book:
+        if index==contact.get('id'):
+            phone_book.remove(result)
+            
+            
+    with open(path, 'w', encoding='UTF-8') as file:
+        for contact in phone_book:
+            line = ''.join(contact)+'\n'
+            file.write(line)
+    
+        
+        
