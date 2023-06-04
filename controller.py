@@ -50,10 +50,10 @@ def start():
 
                     else:
                         current_id=result[0].get('id')
-                    model.delete_contact(current_id, result)
-                    view.print_message(text.delete_successful(name))
+                    model.delete_contact(result)
+                    view.print_message(text.delete_successful)
                 else:
-                    view.print_message(text.delete_successful(name))
+                    view.print_message(text.delete_successful)
 
 
             case 8:

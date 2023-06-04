@@ -26,5 +26,4 @@ def change_successful(name: str)->str:
     return f'Контакт {name} успешно изменен'
 input_delete='Какой контакт удалить? '
 
-def delete_successful(name: str)->str:
-    return f'Контакт {name} успешно изменен'
+delete_successful='Контакт успешно изменен'
